@@ -27,42 +27,16 @@
   margin-top: .8rem;
 }
 
-/* @media (prefers-reduced-motion: reduce) {
-  .timelineCard:hover,
-  .educationCard:hover {
-    transform: none;
-  }
+.educationCards {
+  max-width: 860px;
+  margin: 3.5rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
 @media (max-width: 768px) {
-  .timeline::before {
-    left: 16px;
-  }
-
-  .timelineItem,
-  .timelineItem:nth-child(odd) {
-    flex-direction: column;
-    padding-left: 40px;
-  }
-
-  .timelineDot {
-    left: 16px;
-  }
-
-  .timelineCard {
-    width: 100%;
-    text-align: left !important;
-  }
-
-  .timelineCard li::before {
-    content: '> ';
-  }
-
-  .timelineCard li::after {
-    content: '' !important;
-  }
-
   .educationCards {
     grid-template-columns: 1fr;
   }
-} */
+}
