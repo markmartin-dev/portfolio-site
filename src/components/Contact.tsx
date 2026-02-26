@@ -1,3 +1,5 @@
+import './Contact.module.css'
+
 function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-heading">

@@ -1,3 +1,4 @@
+import appStyles from './components/AppShell.module.css'
 import './App.css'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
@@ -12,16 +13,16 @@ function App() {
 
   return (
     <>
-      <a href="#main-content" className="skip-link">Skip to main content</a>
+      <a href="#main-content" className={appStyles.skipLink}>Skip to main content</a>
       <Nav />
 
       <main id="main-content">
         <Hero />
-        <div className="section-divider" role="separator" aria-hidden="true"></div>
+        <div className={appStyles.sectionDivider} role="separator" aria-hidden="true"></div>
         <Experience />
-        <div className="section-divider" role="separator" aria-hidden="true"></div>
+        <div className={appStyles.sectionDivider} role="separator" aria-hidden="true"></div>
         <Skills />
-        <div className="section-divider" role="separator" aria-hidden="true"></div>
+        <div className={appStyles.sectionDivider} role="separator" aria-hidden="true"></div>
         <Contact />
       </main>
 

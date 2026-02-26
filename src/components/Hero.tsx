@@ -1,3 +1,4 @@
+import './Hero.module.css'
 import { useEffect, useRef } from 'react'
 
 const symbols = ['<', '>', '/>', '{', '}', '()', ';', '=>', '&&', '||', '[]', 'const', 'return', 'import', 'async', 'await', '</>', '.map()', '.then()', 'props', 'state']

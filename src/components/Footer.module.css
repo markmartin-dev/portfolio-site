@@ -1,0 +1,4 @@
+:global(footer) { text-align: center; padding: 2rem 1rem 1.5rem; background: var(--darker); color: var(--muted); font-size: .8rem; border-top: 1px solid var(--border); }
+:global(footer span) { color: var(--sage); }
+:global(.footer-logo) { display: flex; justify-content: center; margin-bottom: 1rem; }
+:global(.footer-logo svg) { width: 44px; height: 50px; }

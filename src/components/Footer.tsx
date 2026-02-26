@@ -1,3 +1,5 @@
+import './Footer.module.css'
+
 function Footer() {
   return (
     <footer aria-label="Site footer">

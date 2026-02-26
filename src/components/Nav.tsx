@@ -1,3 +1,4 @@
+import './Nav.module.css'
 import { useEffect, useRef } from 'react'
 
 const DRAWER_LINKS = [

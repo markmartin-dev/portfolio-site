@@ -1,3 +1,5 @@
+import './Experience.module.css'
+
 function Experience() {
   return (
     <section id="experience" aria-labelledby="experience-heading">
