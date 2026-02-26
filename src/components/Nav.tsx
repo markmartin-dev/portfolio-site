@@ -1,4 +1,5 @@
-import './Nav.module.css'
+import styles from './Nav.module.css'
+import navBarLogo from '../assets/mm-logo.svg'
 import { useEffect, useRef } from 'react'
 
 const DRAWER_LINKS = [
@@ -25,8 +26,8 @@ function Nav() {
     const focusableSelectors = 'a[href], button:not([disabled])'
 
     const openDrawer = () => {
-      drawer.classList.add('open')
-      toggle.classList.add('open')
+      drawer.classList.add(styles.open)
+      toggle.classList.add(styles.open)
       toggle.setAttribute('aria-expanded', 'true')
       toggle.setAttribute('aria-label', 'Close navigation menu')
       document.body.style.overflow = 'hidden'
@@ -34,8 +35,8 @@ function Nav() {
     }
 
     const closeDrawer = () => {
-      drawer.classList.remove('open')
-      toggle.classList.remove('open')
+      drawer.classList.remove(styles.open)
+      toggle.classList.remove(styles.open)
       toggle.setAttribute('aria-expanded', 'false')
       toggle.setAttribute('aria-label', 'Open navigation menu')
       document.body.style.overflow = ''
@@ -43,7 +44,7 @@ function Nav() {
     }
 
     const onDrawerKeydown = (event: KeyboardEvent) => {
-      if (!drawer.classList.contains('open')) {
+      if (!drawer.classList.contains(styles.open)) {
         return
       }
 
@@ -67,7 +68,7 @@ function Nav() {
     }
 
     const onToggleClick = () => {
-      if (drawer.classList.contains('open')) {
+      if (drawer.classList.contains(styles.open)) {
         closeDrawer()
       } else {
         openDrawer()
@@ -77,7 +78,7 @@ function Nav() {
     const onDrawerLinkClick = () => closeDrawer()
 
     const sections = Array.from(document.querySelectorAll<HTMLElement>('section[id]'))
-    const navLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>('.nav-links a'))
+    const navLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>(`.${styles.navLinks} a`))
 
     const updateNav = () => {
       let current = ''
@@ -98,7 +99,7 @@ function Nav() {
       })
     }
 
-    const drawerLinks = Array.from(drawer.querySelectorAll<HTMLAnchorElement>('.drawer-link'))
+    const drawerLinks = Array.from(drawer.querySelectorAll<HTMLAnchorElement>(`.${styles.drawerLink}`))
 
     drawer.addEventListener('keydown', onDrawerKeydown)
     toggle.addEventListener('click', onToggleClick)
@@ -119,26 +120,16 @@ function Nav() {
 
   return (
     <>
-      <nav aria-label="Primary navigation">
-        <a href="#hero" className="nav-brand" aria-label="Mark Martin - go to top">
-          <svg viewBox="0 0 120 138" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-            <defs>
-              <linearGradient id="hg_nav" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="rgba(174,195,176,0.6)" />
-                <stop offset="100%" stopColor="rgba(89,131,146,0.6)" />
-              </linearGradient>
-            </defs>
-            <polygon points="60,7 111,34 111,104 60,131 9,104 9,34" fill="none" stroke="url(#hg_nav)" strokeWidth="8" strokeLinejoin="round" />
-            <polyline points="22,96 40,70 57,87 60,83 63,87 80,70 98,96" fill="none" stroke="#29AAD4" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
-            <polyline points="57,87 60,83 63,87" fill="none" stroke="#4A3585" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+      <nav className={styles.navBar} aria-label="Primary navigation">
+        <a href="#hero" className={styles.navBrand} aria-label="Mark Martin - go to top">
+          <img src={navBarLogo} className={styles.navBarLogo} alt="Mark Martin Logo" />
           <div>
-            <div className="nav-brand-name">Mark Martin</div>
-            <div className="nav-brand-title" aria-hidden="true">Software Developer</div>
+            <div className={styles.navBrandName}>Mark Martin</div>
+            <div className={styles.navBrandTitle} aria-hidden="true">Software Developer</div>
           </div>
         </a>
 
-        <ul className="nav-links" role="list">
+        <ul className={styles.navLinks} role="list">
           {DRAWER_LINKS.map((link) => (
             <li key={link.href}>
               <a href={link.href}>{link.label}</a>
@@ -148,7 +139,7 @@ function Nav() {
 
         <button
           ref={toggleRef}
-          className="nav-toggle"
+          className={styles.navToggle}
           aria-label="Open navigation menu"
           aria-expanded="false"
           aria-controls="nav-drawer"
@@ -159,26 +150,16 @@ function Nav() {
         </button>
       </nav>
 
-      <div ref={drawerRef} className="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
-        <button ref={closeRef} className="nav-drawer-close" aria-label="Close navigation menu">
+      <div ref={drawerRef} className={styles.navDrawer} id="nav-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <button ref={closeRef} className={styles.navDrawerClose} aria-label="Close navigation menu">
           &#10005;
         </button>
-        <div className="nav-drawer-logo" aria-hidden="true">
-          <svg viewBox="0 0 120 138" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-            <defs>
-              <linearGradient id="hg_drawer" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#C4CADF" />
-                <stop offset="100%" stopColor="#9DD4E0" />
-              </linearGradient>
-            </defs>
-            <polygon points="60,7 111,34 111,104 60,131 9,104 9,34" fill="none" stroke="url(#hg_drawer)" strokeWidth="8" strokeLinejoin="round" />
-            <polyline points="22,96 40,70 57,87 60,83 63,87 80,70 98,96" fill="none" stroke="#29AAD4" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
-            <polyline points="57,87 60,83 63,87" fill="none" stroke="#4A3585" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
+        <div className={styles.navDrawerLogo} aria-hidden="true">
+          <img src={navBarLogo} alt="Mark Martin Logo" className={styles.navDrawerLogo}/>
         </div>
 
         {DRAWER_LINKS.map((link) => (
-          <a key={link.href} href={link.href} className="drawer-link">
+          <a key={link.href} href={link.href} className={styles.drawerLink}>
             {link.label}
           </a>
         ))}
