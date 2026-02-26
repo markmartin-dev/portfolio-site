@@ -1,16 +1,4 @@
-export type SkillItem = {
-  iconClass: string
-  label: string
-  emoji?: string
-}
-
-export type SkillCategory = {
-  title: string
-  ariaLabel: string
-  items: SkillItem[]
-}
-
-export const skillsData: SkillCategory[] = [
+export const skillsData = [
   {
     title: 'Languages & Frameworks',
     ariaLabel: 'Languages and Frameworks',
