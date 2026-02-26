@@ -1,0 +1,51 @@
+.educationCards {
+  max-width: 860px;
+  margin: 3.5rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.educationCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: .75rem;
+  padding: 1.4rem 1.6rem;
+  transition: transform .3s;
+}
+
+.educationCard:hover {
+  transform: translateY(-4px);
+}
+
+.educationSchool {
+  font-size: .76rem;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-bottom: .3rem;
+}
+
+.educationDegree {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--mist);
+  margin-bottom: .25rem;
+}
+
+.educationYear {
+  font-size: .8rem;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .educationCard:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .educationCards {
+    grid-template-columns: 1fr;
+  }
+}

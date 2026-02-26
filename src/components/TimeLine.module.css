@@ -1,0 +1,144 @@
+.timeline {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timelineItem:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.timelineItem:nth-child(odd) .timelineCard {
+  text-align: right;
+}
+
+.timelineDot {
+  position: absolute;
+  left: 50%;
+  top: 1.2rem;
+  width: 14px;
+  height: 14px;
+  background: var(--steel);
+  border-radius: 50%;
+  border: 3px solid var(--dark);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timelineCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: .75rem;
+  padding: 1.5rem 1.8rem;
+  width: calc(50% - 2rem);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.timelineCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(89,131,146,.15);
+}
+
+.timelineCompany {
+  font-size: .78rem;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  margin-bottom: .3rem;
+}
+
+.timelineRole {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--mist);
+  margin-bottom: .3rem;
+}
+
+.timelineDate {
+  font-size: .78rem;
+  color: var(--muted);
+  margin-bottom: .9rem;
+}
+
+.timelineCard ul {
+  list-style: none;
+}
+
+.timelineCard li {
+  font-size: .86rem;
+  color: var(--muted);
+  line-height: 1.65;
+  padding: .2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.timelineCard li:last-child {
+  border: none;
+}
+
+.timelineCard li::before {
+  content: '▹';
+  color: var(--steel);
+}
+
+.timelineItem:nth-child(odd) .timelineCard li::before {
+  content: '';
+}
+
+.timelineItem:nth-child(odd) .timelineCard li::after {
+  content: '◸';
+  color: var(--steel);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timelineCard:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 16px;
+  }
+
+  .timelineItem,
+  .timelineItem:nth-child(odd) {
+    flex-direction: column;
+    padding-left: 40px;
+  }
+
+  .timelineDot {
+    left: 16px;
+  }
+
+  .timelineCard {
+    width: 100%;
+    text-align: left !important;
+  }
+
+  .timelineCard li::before {
+    content: '▹'!important;
+  }
+
+  .timelineCard li::after {
+    content: '' !important;
+  }
+}
