@@ -1,4 +1,4 @@
-.skip-link {
+.skipLink {
   position: absolute;
   top: -100%;
   left: 1rem;
@@ -13,7 +13,7 @@
   transition: top .2s;
 }
 
-.skip-link:focus {
+.skipLink:focus {
   top: 0;
 }
 
@@ -21,3 +21,4 @@
   height: 3px;
   background: linear-gradient(90deg, var(--ocean), var(--steel), var(--sage));
 }
+
