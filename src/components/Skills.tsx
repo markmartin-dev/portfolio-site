@@ -5,9 +5,9 @@ import { skillsData } from '../data/skillsData'
 function Skills() {
   return (
     <section id="skills" className={styles.skillsWrapper} aria-labelledby="skills-heading">
-      <h2 id="skills-heading" className="section-title fade-up">Core Technical Skills</h2>
-      <div className="accent-line fade-up" aria-hidden="true"></div>
-      <p className="section-sub fade-up">5+ years of hands-on web development expertise</p>
+      <h2 id="skills-heading" className={`${styles.sectionTitle} fade-up`}>Core Technical Skills</h2>
+      <div className={`${styles.accentLine} fade-up`} aria-hidden="true"></div>
+      <p className={`${styles.sectionSub} fade-up`}>5+ years of hands-on web development expertise</p>
 
       <div className={styles.skillsGrid}>
         {skillsData.map((category, index) => (

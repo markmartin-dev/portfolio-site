@@ -1,16 +1,100 @@
-.skillCategory { background: var(--card); border: 1px solid var(--border); border-radius: .75rem; padding: 1.6rem; transition: transform .3s, box-shadow .3s; }
-.skillCategory:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(89,131,146,.12); }
-.skillCatTitle { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--sage); margin-bottom: 1.1rem; font-weight: 700; padding-bottom: .6rem; border-bottom: 1px solid var(--border); }
-.techList { display: flex; flex-direction: column; gap: .45rem; }
-.techItem { display: flex; align-items: center; gap: .65rem; padding: .45rem .7rem; border-radius: .4rem; background: rgba(89,131,146,.07); border: 1px solid transparent; transition: background .2s, border-color .2s; font-size: .84rem; color: var(--mist); }
-.techItem:hover { background: rgba(89,131,146,.16); border-color: rgba(89,131,146,.25); }
-.techItem i { font-size: 1.15rem; width: 1.3rem; text-align: center; flex-shrink: 0; }
-.techItem .tiEmoji { font-size: 1rem; width: 1.3rem; text-align: center; flex-shrink: 0; }
-.techItem .tiSvg { width: 1.3rem; height: 1.3rem; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; }
-.techItem .tiSvg svg { width: 1.1rem; height: 1.1rem; fill: currentColor; opacity: .85; }
-.techItem .tiImg { width: 1.3rem; height: 1.3rem; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; }
-.techItem .tiImg img { width: 1.2rem; height: 1.2rem; object-fit: contain; opacity: .9; filter: brightness(0) invert(1); }
+.skillCategory {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: .75rem;
+  padding: 1.6rem;
+  transition: transform .3s, box-shadow .3s;
+}
+
+.skillCategory:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(89,131,146,.12);
+}
+
+.skillCatTitle {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--sage);
+  margin-bottom: 1.1rem;
+  font-weight: 700;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.techList {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+.techItem {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .45rem .7rem;
+  border-radius: .4rem;
+  background: rgba(89,131,146,.07);
+  border: 1px solid transparent;
+  transition: background .2s, border-color .2s;
+  font-size: .84rem;
+  color: var(--mist);
+}
+
+.techItem:hover {
+  background: rgba(89,131,146,.16);
+  border-color: rgba(89,131,146,.25);
+}
+
+.techItem i {
+  font-size: 1.15rem;
+  width: 1.3rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.tiEmoji {
+  font-size: 1rem;
+  width: 1.3rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.tiSvg {
+  width: 1.3rem;
+  height: 1.3rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tiSvg svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+  opacity: .85;
+}
+
+.tiImg {
+  width: 1.3rem;
+  height: 1.3rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tiImg img {
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: contain;
+  opacity: .9;
+  filter: brightness(0) invert(1);
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .skillCategory:hover { transform: none; }
+  .skillCategory:hover {
+    transform: none;
+  }
 }

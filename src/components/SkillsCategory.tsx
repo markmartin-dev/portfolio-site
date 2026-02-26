@@ -17,7 +17,7 @@ const SkillsCategory: React.FC<SkillsCategoryProps> = (props) => {
         {props.items.map((item, index) => (
           <li key={index} className={styles.techItem}>
             {item.emoji ? (
-              <span className={item.iconClass} aria-hidden="true">{item.emoji}</span>
+              <span className={styles.tiEmoji} aria-hidden="true">{item.emoji}</span>
             ) : (
               <i className={item.iconClass} aria-hidden="true"></i>
             )}{' '}

@@ -1,2 +1,36 @@
-.skillsWrapper { padding: 6rem 2rem; background: var(--darker); }
-.skillsGrid { max-width: 980px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 1.5rem; }
+.skillsWrapper {
+  padding: 6rem 2rem;
+  background: var(--darker);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: clamp(1.8rem,4vw,2.5rem);
+  font-weight: 800;
+  color: var(--mist);
+  margin-bottom: .5rem;
+}
+
+.accentLine {
+  width: 56px;
+  height: 3px;
+  margin: .6rem auto 0;
+  background: linear-gradient(90deg,var(--steel),var(--sage));
+  border-radius: 2px;
+}
+
+.sectionSub {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 3.5rem;
+  font-size: .95rem;
+  margin-top: .8rem;
+}
+
+.skillsGrid {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  gap: 1.5rem;
+}
