@@ -29,7 +29,8 @@ function Contact() {
 
         <div className={`${styles.availability} fade-up`} role="status" aria-live="polite" aria-label="Availability status: Open to work in Toronto and remote, full-time or contract">
           <div className={styles.availDot} aria-hidden="true"></div>
-          <p className={styles.availText}><strong>Open to work</strong> &middot; Toronto &amp; remote &middot; Full-time or contract</p>
+          <p className={styles.availText}><strong>Open to work</strong></p>
+          <p className={styles.availText}> Canada &middot; Onsite &middot; Hybrid &middot; Remote</p>
         </div>
       </div>
     </section>
