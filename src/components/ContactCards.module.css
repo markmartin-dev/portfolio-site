@@ -1,0 +1,43 @@
+.contactCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: .75rem;
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .55rem;
+}
+
+.contactCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--steel);
+  box-shadow: 0 12px 36px rgba(89,131,146,.15);
+}
+
+.contactCardIcon {
+  font-size: 1.8rem;
+}
+
+.contactCardLabel {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--sage);
+  font-weight: 700;
+}
+
+.contactCardValue {
+  font-size: .86rem;
+  color: var(--mist);
+  word-break: break-all;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contactCard:hover {
+    transform: none;
+  }
+}
