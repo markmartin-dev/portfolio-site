@@ -1,0 +1,88 @@
+export type SkillItem = {
+  iconClass: string
+  label: string
+  emoji?: string
+}
+
+export type SkillCategory = {
+  title: string
+  ariaLabel: string
+  items: SkillItem[]
+}
+
+export const skillsData: SkillCategory[] = [
+  {
+    title: 'Languages & Frameworks',
+    ariaLabel: 'Languages and Frameworks',
+    items: [
+      { iconClass: 'devicon-javascript-plain colored', label: 'JavaScript (ES6+)' },
+      { iconClass: 'devicon-typescript-plain colored', label: 'TypeScript' },
+      { iconClass: 'devicon-react-original colored', label: 'React' },
+      { iconClass: 'devicon-nextjs-plain', label: 'Next.js' },
+      { iconClass: 'devicon-nodejs-plain colored', label: 'Node.js' },
+      { iconClass: 'devicon-php-plain colored', label: 'PHP' },
+      { iconClass: 'devicon-html5-plain colored', label: 'HTML5' },
+      { iconClass: 'devicon-css3-plain colored', label: 'CSS3' },
+      { iconClass: 'devicon-sass-plain colored', label: 'SASS' },
+    ],
+  },
+  {
+    title: 'Tools & Workflow',
+    ariaLabel: 'Tools and Workflow',
+    items: [
+      { iconClass: 'devicon-jira-plain colored', label: 'Jira' },
+      { iconClass: 'devicon-figma-plain colored', label: 'Figma' },
+      { iconClass: 'devicon-vitejs-plain colored', label: 'Vite' },
+      { iconClass: 'devicon-gulp-plain colored', label: 'Gulp' },
+      { iconClass: 'ti-emoji', label: 'Parcel', emoji: '\u{1F4E6}' },
+      { iconClass: 'devicon-wordpress-plain colored', label: 'WordPress' },
+      { iconClass: 'ti-emoji', label: 'Agile / Scrum', emoji: '\u{1F4C8}' },
+      { iconClass: 'ti-emoji', label: 'Code Reviews', emoji: '\u{1F440}' },
+      { iconClass: 'ti-emoji', label: 'Documentation', emoji: '\u{1F4DD}' },
+    ],
+  },
+  {
+    title: 'Data & APIs',
+    ariaLabel: 'Data and APIs',
+    items: [
+      { iconClass: 'ti-emoji', label: 'REST APIs', emoji: '\u{1F517}' },
+      { iconClass: 'ti-emoji', label: 'JSON', emoji: '\u{1F4C4}' },
+      { iconClass: 'devicon-mysql-plain colored', label: 'MySQL' },
+      { iconClass: 'ti-emoji', label: 'SQL', emoji: '\u{1F4CA}' },
+      { iconClass: 'devicon-reactrouter-plain colored', label: 'TanStack Query' },
+    ],
+  },
+  {
+    title: 'Testing & Accessibility',
+    ariaLabel: 'Testing and Accessibility',
+    items: [
+      { iconClass: 'ti-emoji', label: 'Cross-browser Testing', emoji: '\u{1F310}' },
+      { iconClass: 'ti-emoji', label: 'Regression Checks', emoji: '\u{1F504}' },
+      { iconClass: 'ti-emoji', label: 'axe (Deque)', emoji: '\u2705' },
+      { iconClass: 'devicon-google-plain colored', label: 'Lighthouse' },
+      { iconClass: 'ti-emoji', label: 'WCAG 2.1 AA', emoji: '\u267F' },
+    ],
+  },
+  {
+    title: 'Cloud & DevOps',
+    ariaLabel: 'Cloud and DevOps',
+    items: [
+      { iconClass: 'devicon-amazonwebservices-plain-wordmark colored', label: 'AWS S3' },
+      { iconClass: 'devicon-amazonwebservices-plain-wordmark colored', label: 'AWS CloudFront' },
+      { iconClass: 'devicon-git-plain colored', label: 'Git' },
+      { iconClass: 'devicon-github-plain', label: 'GitHub Actions' },
+      { iconClass: 'devicon-bitbucket-plain colored', label: 'Bitbucket Pipelines' },
+    ],
+  },
+  {
+    title: 'Performance',
+    ariaLabel: 'Performance',
+    items: [
+      { iconClass: 'ti-emoji', label: 'Core Web Vitals', emoji: '\u26A1' },
+      { iconClass: 'ti-emoji', label: 'Bundle Optimization', emoji: '\u{1F4E6}' },
+      { iconClass: 'ti-emoji', label: 'Image Optimization', emoji: '\u{1F5BC}\uFE0F' },
+      { iconClass: 'ti-emoji', label: 'CDN / CloudFront', emoji: '\u2601\uFE0F' },
+      { iconClass: 'ti-emoji', label: 'CSS Refactoring', emoji: '\u{1F3AC}' },
+    ],
+  },
+]
