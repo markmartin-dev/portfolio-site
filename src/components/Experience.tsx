@@ -15,6 +15,7 @@ function Experience() {
 
       <h2 id="education-heading" className={`${styles.sectionTitle} fade-up`} style={{ marginTop: '4rem' }}>Education</h2>
       <div className={`${styles.accentLine} fade-up`} aria-hidden="true"></div>
+      <div className={`${styles.educationCards} fade-up`} role="list" aria-labelledby="education-heading">
         {eduData.map((edu, index) => (
             <EducationCard
               key={index}
@@ -25,6 +26,7 @@ function Experience() {
             />
           ))
         }
+        </div>
     </section>
   )
 }

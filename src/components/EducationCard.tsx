@@ -9,7 +9,7 @@ interface EducationCardProps {
 
 const EducationCard: React.FC<EducationCardProps> = (props) => {
   return (
-    <article className={`${styles.eduCard} fade-up`} role="listitem">
+    <article className={`${styles.educationCard} fade-up`} role="listitem">
       <p className={styles.educationSchool}>{props.institution}</p>
       <h3 className={styles.educationDegree}>{props.degree}</h3>
       {props.field && <p className={styles.educationField}>{props.field}</p>}
