@@ -1,9 +1,9 @@
-import './Hero.module.css'
+import styles from './Hero.module.css'
+import heroLogo from '../assets/mm-logo.svg'
 import { useEffect, useRef } from 'react'
 
 const symbols = ['<', '>', '/>', '{', '}', '()', ';', '=>', '&&', '||', '[]', 'const', 'return', 'import', 'async', 'await', '</>', '.map()', '.then()', 'props', 'state']
-const colors = ['rgba(89,131,146,', 'rgba(174,195,176,', 'rgba(41,170,212,', 'rgba(74,53,133,']
-
+const colors = ['rgba(89,131,146,', 'rgba(174,195,176,', 'rgba(41,170,212,', 'rgba(74,53,133,)']
 type Particle = {
   x: number
   y: number
@@ -99,35 +99,22 @@ function Hero() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="hero" aria-labelledby="hero-heading">
-      <canvas ref={canvasRef} id="hero-canvas" aria-hidden="true"></canvas>
-      <div className="hero-inner">
-        <div className="hero-logo" aria-hidden="true">
-          <svg viewBox="0 0 120 138" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-            <defs>
-              <linearGradient id="hg_hero" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#C4CADF" />
-                <stop offset="50%" stopColor="#A8C4DC" />
-                <stop offset="100%" stopColor="#9DD4E0" />
-              </linearGradient>
-            </defs>
-            <polygon points="60,7 111,34 111,104 60,131 9,104 9,34" fill="none" stroke="url(#hg_hero)" strokeWidth="8" strokeLinejoin="round" />
-            <polyline points="22,96 40,70 57,87 60,83 63,87 80,70 98,96" fill="none" stroke="#29AAD4" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
-            <polyline points="57,87 60,83 63,87" fill="none" stroke="#4A3585" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
+    <section ref={sectionRef} id="hero" className={styles.heroWrapper} aria-labelledby="hero-heading">
+      <canvas ref={canvasRef} id="hero-canvas" className={styles.heroCanvas} aria-hidden="true"></canvas>
+      <div className={styles.heroInner}>
+      <img src={heroLogo} alt="Mark Martin Logo" className={styles.heroLogo} />
 
-        <p className="hero-tag" aria-label="Status: Available for Opportunities">
+        <p className={styles.heroTag} aria-label="Status: Available for Opportunities">
           Available for Opportunities
         </p>
-        <h1 id="hero-heading">Roentgen Mark Martin</h1>
-        <p>
+        <h1 id="hero-heading" className={styles.heroHeading}>Roentgen Mark Martin</h1>
+        <p className={styles.heroDescription}>
           Software Developer specializing in React &amp; JavaScript front-end engineering, API integration, and cloud-connected
           web applications &mdash; 5+ years of production experience.
         </p>
-        <div className="hero-btns">
-          <a href="#contact" className="btn btn-ghost">Get In Touch</a>
-          <a href="Mark_Martin_EunaSolutions_Software_Developer_Resume.pdf" download className="btn btn-download">
+        <div className={styles.heroButtons}>
+          <a href="#contact" className={`${styles.btn} ${styles.btnGhost}`}>Get In Touch</a>
+          <a href="Mark_Martin_EunaSolutions_Software_Developer_Resume.pdf" download className={`${styles.btn} ${styles.btnDownload}`}>
             <span aria-hidden="true">&#11015;</span> Download Resume
           </a>
         </div>
