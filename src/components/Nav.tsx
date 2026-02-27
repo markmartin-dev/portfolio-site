@@ -125,7 +125,7 @@ function Nav() {
           <img src={navBarLogo} className={styles.navBarLogo} alt="Mark Martin Logo" />
           <div>
             <div className={styles.navBrandName}>Mark Martin</div>
-            <div className={styles.navBrandTitle} aria-hidden="true">Software Developer</div>
+            <div className={styles.navBrandTitle} aria-hidden="true">Web Developer</div>
           </div>
         </a>
 
