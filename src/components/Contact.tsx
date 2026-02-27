@@ -1,6 +1,7 @@
 import styles from './Contact.module.css'
 import { contactCardData } from '../data/contactCardData'
 import ContactCards from './ContactCards'
+import InfoCard from './InfoCard'
 
 function Contact() {
   return (
@@ -18,6 +19,7 @@ function Contact() {
               <ContactCards
                 key={index}
                 icon={card.icon}
+                iconClass={card.iconClass}
                 type={card.type}
                 ariaLabel={card.ariaLabel}
                 href={card.href}
@@ -26,12 +28,7 @@ function Contact() {
             ))
           }
         </div>
-
-        <div className={`${styles.availability} fade-up`} role="status" aria-live="polite" aria-label="Availability status: Open to work in Toronto and remote, full-time or contract">
-          <div className={styles.availDot} aria-hidden="true"></div>
-          <p className={styles.availText}><strong>Open to work</strong></p>
-          <p className={styles.availText}> Canada &middot; Onsite &middot; Hybrid &middot; Remote</p>
-        </div>
+        <InfoCard primaryText='Open to work' secondaryText='Canada &middot; Onsite &middot; Hybrid &middot; Remote' ariaLabel='Availability status: Open to work in Canada. Onsite, hybrid, or remote. Full-time or contract' />
       </div>
     </section>
   )
