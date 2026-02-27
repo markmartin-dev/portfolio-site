@@ -1,5 +1,6 @@
 import styles from './Hero.module.css'
 import heroLogo from '../assets/mm-logo.svg'
+import resume from '../assets/Mark_Martin_General_Purpose_Resume_v6_ats.pdf'
 import { useEffect, useRef } from 'react'
 
 const symbols = ['<', '>', '/>', '{', '}', '()', ';', '=>', '&&', '||', '[]', 'const', 'return', 'import', 'async', 'await', '</>', '.map()', '.then()', 'props', 'state']
@@ -109,13 +110,12 @@ function Hero() {
         </p>
         <h1 id="hero-heading" className={styles.heroHeading}>Roentgen Mark Martin</h1>
         <p className={styles.heroDescription}>
-          Software Developer specializing in React &amp; JavaScript front-end engineering, API integration, and cloud-connected
-          web applications &mdash; 5+ years of production experience.
+          Web Developer building responsive, accessible front-end experiences with React, API integrations, and modern web applications.
         </p>
         <div className={styles.heroButtons}>
           <a href="#contact" className={`${styles.btn} ${styles.btnGhost}`}>Get In Touch</a>
-          <a href="Mark_Martin_EunaSolutions_Software_Developer_Resume.pdf" download className={`${styles.btn} ${styles.btnDownload}`}>
-            <span aria-hidden="true">&#11015;</span> Download Resume
+          <a href={resume} download className={`${styles.btn} ${styles.btnDownload}`}>
+            <span aria-hidden="true" className='material-symbols-outlined'>download</span> Download Resume
           </a>
         </div>
       </div>

@@ -44,6 +44,7 @@
   display: flex;
   margin: 0 auto;
   margin-bottom: 1.6rem;
+  width: clamp(120px, 180px, 240px);
 }
 
 .heroLogo svg {
