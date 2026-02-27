@@ -16,6 +16,13 @@ type Particle = {
   drift: number
 }
 
+const handleResumeClick = () => {
+  window.gtag?.('event', 'resume_download_click', {
+    event_category: 'engagement',
+    event_label: 'Hero Resume Button',
+  });
+};
+
 function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -114,7 +121,7 @@ function Hero() {
         </p>
         <div className={styles.heroButtons}>
           <a href="#contact" className={`${styles.btn} ${styles.btnGhost}`}>Get In Touch</a>
-          <a href={resume} download className={`${styles.btn} ${styles.btnDownload}`}>
+          <a href={resume} download className={`${styles.btn} ${styles.btnDownload}`} onClick={handleResumeClick}>
             <span aria-hidden="true" className='material-symbols-outlined'>download</span> Download Resume
           </a>
         </div>
