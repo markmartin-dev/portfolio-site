@@ -26,9 +26,9 @@
   flex-direction: row-reverse;
 }
 
-.timelineItem:nth-child(odd) .timelineCard {
+/* .timelineItem:nth-child(odd) .timelineCard {
   text-align: right;
-}
+} */
 
 .timelineDot {
   position: absolute;
@@ -79,7 +79,7 @@
 }
 
 .timelineCard ul {
-  list-style: none;
+  list-style: disclosure-closed;
 }
 
 .timelineCard li {
@@ -94,7 +94,7 @@
   border: none;
 }
 
-.timelineCard li::before {
+/* .timelineCard li::before {
   content: '▹';
   color: var(--steel);
 }
@@ -106,7 +106,7 @@
 .timelineItem:nth-child(odd) .timelineCard li::after {
   content: '◸';
   color: var(--steel);
-}
+} */
 
 @media (prefers-reduced-motion: reduce) {
   .timelineCard:hover {
@@ -131,14 +131,14 @@
 
   .timelineCard {
     width: 100%;
-    text-align: left !important;
+    /* text-align: left !important; */
   }
 
-  .timelineCard li::before {
+  /* .timelineCard li::before {
     content: '▹'!important;
   }
 
   .timelineCard li::after {
     content: '' !important;
-  }
+  } */
 }
