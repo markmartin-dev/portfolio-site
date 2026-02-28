@@ -69,30 +69,6 @@ body {
   border: 0;
 }
 
-.custom-icon {
-  height: 20px;
-}
-
-.tanstack-icon::before{
-  content: "";
-  background-image: url('https://tanstack.com/images/logos/logo-color-100.png');
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.axe-icon::before {
-  content: "";
-  background-image: url('https://lh3.googleusercontent.com/FAeHtqMDT3qrN6zuknas1KzOzMuJwo3OVzGsGPPVJMfcUz0iP7OpG8tjAB1uZ7IbP7_EkePpQbC7jZ8zbK_jBdIfzvY=s120');
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
