@@ -14,7 +14,7 @@ function Contact() {
           discuss or a project in mind &mdash; reach out through any channel below.
         </p>
 
-        <div className={`${styles.contactCards} fade-up`} role="list">
+        <ul className={`${styles.contactCards} fade-up`}>
           {contactCardData.map((card, index) => (
               <ContactCards
                 key={index}
@@ -27,7 +27,7 @@ function Contact() {
               />
             ))
           }
-        </div>
+        </ul>
         <InfoCard primaryText='Open to work' secondaryText='Canada &middot; Onsite &middot; Hybrid &middot; Remote' ariaLabel='Availability status: Open to work in Canada. Onsite, hybrid, or remote. Full-time or contract' />
       </div>
     </section>

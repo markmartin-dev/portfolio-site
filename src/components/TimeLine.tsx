@@ -9,9 +9,9 @@ interface TimeLineItem {
 
 const TimeLine: React.FC<{ items: TimeLineItem[] }> = (props) => {
     return (
-        <div className={styles.timeline} role="list">
+        <ul className={styles.timeline}>
             {props.items.map((item, index) => (
-            <article key={index} className={`${styles.timelineItem} fade-up`} role="listitem">
+            <li key={index} className={`${styles.timelineItem} fade-up`}>
                 <div className={styles.timelineDot} aria-hidden="true"></div>
                 <div className={styles.timelineCard}>
                 <span className={styles.timelineCompany}>{item.company}</span>
@@ -25,9 +25,9 @@ const TimeLine: React.FC<{ items: TimeLineItem[] }> = (props) => {
                     ))}
                 </ul>
                 </div>
-            </article>
+            </li>
             ))}
-        </div>  
+        </ul>  
     )
 }
 
