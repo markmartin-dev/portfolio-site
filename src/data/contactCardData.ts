@@ -15,8 +15,8 @@ export const contactCardData = [
     },
     {
         type: 'LinkedIn',
-        value: 'linkedin.com/in/markmartin',
-        href: 'https://linkedin.com/in/markmartin',
+        value: 'linkedin.com/in/roentgen-martin',
+        href: 'https://www.linkedin.com/in/roentgen-martin/',
         iconClass: 'devicon-linkedin-plain',
         ariaLabel: 'Visit LinkedIn profile (opens in new tab)',
         external: true
