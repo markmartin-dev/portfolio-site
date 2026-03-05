@@ -12,9 +12,9 @@ function Skills() {
         primaryText='Currently Learning:' 
         secondaryText={
         <>
-          <i className="devicon-jest-plain"></i> Jest  
-          &middot; <i className="devicon-storybook-plain"></i> StoryBook 
-          &middot; WCAG 2.2 AA
+          <i className="devicon-jest-plain"></i> Jest &nbsp; 
+          &middot;&nbsp; <i className="devicon-python-plain"></i> Python &nbsp;
+          &middot;&nbsp; <i className="devicon-storybook-plain"></i> StoryBook
         </> 
       } 
         ariaLabel="Currently Learning Jest, StoryBook, WCAG 2.2 AA" 
