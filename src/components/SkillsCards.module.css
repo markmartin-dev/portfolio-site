@@ -25,6 +25,11 @@
   gap: 18px;
 }
 
+.skillCardWrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .card {
   position: relative;
   padding: 20px 24px;

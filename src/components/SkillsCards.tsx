@@ -12,7 +12,7 @@ export const SkillsCards: React.FC<SkillsCardsProps> = ({
   className,
 }) => {
   return (
-    <div className={[styles.grid, className].filter(Boolean).join(" ")}>
+    <div className={[styles.grid, styles.skillCardWrapper, className].filter(Boolean).join(" ")}>
       {data.map((group) => (
         <section
           key={group.id}
